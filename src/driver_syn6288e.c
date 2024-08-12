@@ -1207,7 +1207,7 @@ uint8_t syn6288e_get_synthesis_speed(syn6288e_handle_t *handle, uint8_t *speed)
 }
 
 /**
- * @brief     sent the command to the chip
+ * @brief     send the command to the chip
  * @param[in] *handle points to a syn6288e handle structure
  * @param[in] *command points to a command buffer
  * @return    status code
