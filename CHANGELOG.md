@@ -1,3 +1,9 @@
+## 1.0.4(2024-08-19)
+
+## Bug Fixes
+
+- fix power down bug
+
 ## 1.0.3(2024-08-18)
 
 ## Bug Fixes
