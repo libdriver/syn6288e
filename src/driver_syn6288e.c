@@ -475,21 +475,6 @@ uint8_t syn6288e_power_down(syn6288e_handle_t *handle)
         return 1;                                                         /* return error */
     }
     handle->delay_ms(100);                                                /* delay 100 ms */
-    res = handle->uart_flush();                                           /* uart flush */
-    if (res != 0)                                                         /* check result */
-    {
-        handle->debug_print("syn6288e: uart flush failed.\n");            /* uart flush failed */
-        
-        return 1;                                                         /* return error */
-    }
-    res = handle->uart_write((uint8_t *)cmd, 5);                          /* uart write */
-    if (res != 0)                                                         /* check result */
-    {
-        handle->debug_print("syn6288e: uart write failed.\n");            /* uart write failed */
-        
-        return 1;                                                         /* return error */
-    }
-    handle->delay_ms(100);                                                /* delay 100 ms */
     len = handle->uart_read((uint8_t *)&temp, 1);                         /* uart read */
     if (len != 1)                                                         /* check result */
     {
