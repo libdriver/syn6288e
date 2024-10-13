@@ -1,3 +1,9 @@
+## 1.0.5 (2024-10-13)
+
+## Bug Fixes
+
+- fix raspberrypi4b uart bugs
+
 ## 1.0.4(2024-08-19)
 
 ## Bug Fixes
