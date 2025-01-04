@@ -248,64 +248,64 @@ typedef struct syn6288e_info_s
 
 /**
  * @brief     initialize syn6288e_handle_t structure
- * @param[in] HANDLE points to a syn6288e handle structure
- * @param[in] STRUCTURE is syn6288e_handle_t
+ * @param[in] HANDLE pointer to a syn6288e handle structure
+ * @param[in] STRUCTURE syn6288e_handle_t
  * @note      none
  */
 #define DRIVER_SYN6288E_LINK_INIT(HANDLE, STRUCTURE)   memset(HANDLE, 0, sizeof(STRUCTURE))
 
 /**
  * @brief     link uart_init function
- * @param[in] HANDLE points to a syn6288e handle structure
- * @param[in] FUC points to a uart_init function address
+ * @param[in] HANDLE pointer to a syn6288e handle structure
+ * @param[in] FUC pointer to a uart_init function address
  * @note      none
  */
 #define DRIVER_SYN6288E_LINK_UART_INIT(HANDLE, FUC)   (HANDLE)->uart_init = FUC
 
 /**
  * @brief     link uart_deinit function
- * @param[in] HANDLE points to a syn6288e handle structure
- * @param[in] FUC points to a uart_deinit function address
+ * @param[in] HANDLE pointer to a syn6288e handle structure
+ * @param[in] FUC pointer to a uart_deinit function address
  * @note      none
  */
 #define DRIVER_SYN6288E_LINK_UART_DEINIT(HANDLE, FUC) (HANDLE)->uart_deinit = FUC
 
 /**
  * @brief     link uart_read function
- * @param[in] HANDLE points to a syn6288e handle structure
- * @param[in] FUC points to a uart_read function address
+ * @param[in] HANDLE pointer to a syn6288e handle structure
+ * @param[in] FUC pointer to a uart_read function address
  * @note      none
  */
 #define DRIVER_SYN6288E_LINK_UART_READ(HANDLE, FUC)   (HANDLE)->uart_read = FUC
 
 /**
  * @brief     link uart_write function
- * @param[in] HANDLE points to a syn6288e handle structure
- * @param[in] FUC points to a uart_write function address
+ * @param[in] HANDLE pointer to a syn6288e handle structure
+ * @param[in] FUC pointer to a uart_write function address
  * @note      none
  */
 #define DRIVER_SYN6288E_LINK_UART_WRITE(HANDLE, FUC)  (HANDLE)->uart_write = FUC
 
 /**
  * @brief     link uart_flush function
- * @param[in] HANDLE points to a syn6288e handle structure
- * @param[in] FUC points to a uart_flush function address
+ * @param[in] HANDLE pointer to a syn6288e handle structure
+ * @param[in] FUC pointer to a uart_flush function address
  * @note      none
  */
 #define DRIVER_SYN6288E_LINK_UART_FLUSH(HANDLE, FUC)  (HANDLE)->uart_flush = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to a syn6288e handle structure
- * @param[in] FUC points to a delay_ms function address
+ * @param[in] HANDLE pointer to a syn6288e handle structure
+ * @param[in] FUC pointer to a delay_ms function address
  * @note      none
  */
 #define DRIVER_SYN6288E_LINK_DELAY_MS(HANDLE, FUC)    (HANDLE)->delay_ms = FUC
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to a syn6288e handle structure
- * @param[in] FUC points to a debug_print function address
+ * @param[in] HANDLE pointer to a syn6288e handle structure
+ * @param[in] FUC pointer to a debug_print function address
  * @note      none
  */
 #define DRIVER_SYN6288E_LINK_DEBUG_PRINT(HANDLE, FUC) (HANDLE)->debug_print = FUC
@@ -323,7 +323,7 @@ typedef struct syn6288e_info_s
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to a syn6288e info structure
+ * @param[out] *info pointer to a syn6288e info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -333,7 +333,7 @@ uint8_t syn6288e_info(syn6288e_info_t *info);
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to a syn6288e handle structure
+ * @param[in] *handle pointer to a syn6288e handle structure
  * @return    status code
  *            - 0 success
  *            - 1 uart initialization failed
@@ -345,7 +345,7 @@ uint8_t syn6288e_init(syn6288e_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to a syn6288e handle structure
+ * @param[in] *handle pointer to a syn6288e handle structure
  * @return    status code
  *            - 0 success
  *            - 1 uart deinit failed
@@ -357,8 +357,8 @@ uint8_t syn6288e_deinit(syn6288e_handle_t *handle);
 
 /**
  * @brief     synthesis the test
- * @param[in] *handle points to a syn6288e handle structure
- * @param[in] *text points to a test buffer
+ * @param[in] *handle pointer to a syn6288e handle structure
+ * @param[in] *text pointer to a test buffer
  * @return    status code
  *            - 0 success
  *            - 1 synthesis text failed
@@ -370,8 +370,8 @@ uint8_t syn6288e_synthesis_text(syn6288e_handle_t *handle, char *text);
 
 /**
  * @brief     synthesis the sound
- * @param[in] *handle points to a syn6288e handle structure
- * @param[in] sound is the sound type
+ * @param[in] *handle pointer to a syn6288e handle structure
+ * @param[in] sound sound type
  * @return    status code
  *            - 0 success
  *            - 1 synthesis sound failed
@@ -383,8 +383,8 @@ uint8_t syn6288e_synthesis_sound(syn6288e_handle_t *handle, syn6288e_sound_t sou
 
 /**
  * @brief     synthesis the message
- * @param[in] *handle points to a syn6288e handle structure
- * @param[in] message is the message type
+ * @param[in] *handle pointer to a syn6288e handle structure
+ * @param[in] message message type
  * @return    status code
  *            - 0 success
  *            - 1 synthesis message failed
@@ -396,8 +396,8 @@ uint8_t syn6288e_synthesis_message(syn6288e_handle_t *handle, syn6288e_message_t
 
 /**
  * @brief     synthesis the ring
- * @param[in] *handle points to a syn6288e handle structure
- * @param[in] ring is the ring type
+ * @param[in] *handle pointer to a syn6288e handle structure
+ * @param[in] ring ring type
  * @return    status code
  *            - 0 success
  *            - 1 synthesis ring failed
@@ -409,8 +409,8 @@ uint8_t syn6288e_synthesis_ring(syn6288e_handle_t *handle, syn6288e_ring_t ring)
 
 /**
  * @brief      get the current status
- * @param[in]  *handle points to a syn6288e handle structure
- * @param[out] *status points to a status buffer
+ * @param[in]  *handle pointer to a syn6288e handle structure
+ * @param[out] *status pointer to a status buffer
  * @return     status code
  *             - 0 success
  *             - 1 get status failed
@@ -422,7 +422,7 @@ uint8_t syn6288e_get_status(syn6288e_handle_t *handle, syn6288e_status_t *status
 
 /**
  * @brief     stop the chip
- * @param[in] *handle points to a syn6288e handle structure
+ * @param[in] *handle pointer to a syn6288e handle structure
  * @return    status code
  *            - 0 success
  *            - 1 stop failed
@@ -434,7 +434,7 @@ uint8_t syn6288e_stop(syn6288e_handle_t *handle);
 
 /**
  * @brief     pause the chip
- * @param[in] *handle points to a syn6288e handle structure
+ * @param[in] *handle pointer to a syn6288e handle structure
  * @return    status code
  *            - 0 success
  *            - 1 pause failed
@@ -446,7 +446,7 @@ uint8_t syn6288e_pause(syn6288e_handle_t *handle);
 
 /**
  * @brief     resume the chip
- * @param[in] *handle points to a syn6288e handle structure
+ * @param[in] *handle pointer to a syn6288e handle structure
  * @return    status code
  *            - 0 success
  *            - 1 resume failed
@@ -458,7 +458,7 @@ uint8_t syn6288e_resume(syn6288e_handle_t *handle);
 
 /**
  * @brief     power down the chip
- * @param[in] *handle points to a syn6288e handle structure
+ * @param[in] *handle pointer to a syn6288e handle structure
  * @return    status code
  *            - 0 success
  *            - 1 power down failed
@@ -470,8 +470,8 @@ uint8_t syn6288e_power_down(syn6288e_handle_t *handle);
 
 /**
  * @brief     set the chip text type
- * @param[in] *handle points to a syn6288e handle structure
- * @param[in] type is the chip text type
+ * @param[in] *handle pointer to a syn6288e handle structure
+ * @param[in] type chip text type
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -482,8 +482,8 @@ uint8_t syn6288e_set_text_type(syn6288e_handle_t *handle, syn6288e_type_t type);
 
 /**
  * @brief      get the chip text type
- * @param[in]  *handle points to a syn6288e handle structure
- * @param[out] *type points to a chip text type
+ * @param[in]  *handle pointer to a syn6288e handle structure
+ * @param[out] *type pointer to a chip text type
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -505,8 +505,8 @@ uint8_t syn6288e_get_text_type(syn6288e_handle_t *handle, syn6288e_type_t *type)
 
 /**
  * @brief     set the baud rate
- * @param[in] *handle points to a syn6288e handle structure
- * @param[in] rate is the baud rate
+ * @param[in] *handle pointer to a syn6288e handle structure
+ * @param[in] rate baud rate
  * @return    status code
  *            - 0 success
  *            - 1 set baud rate failed
@@ -518,8 +518,8 @@ uint8_t syn6288e_set_baud_rate(syn6288e_handle_t *handle, syn6288e_baud_rate_t r
 
 /**
  * @brief      get the baud rate
- * @param[in]  *handle points to a syn6288e handle structure
- * @param[out] *rate points to a baud rate buffer
+ * @param[in]  *handle pointer to a syn6288e handle structure
+ * @param[out] *rate pointer to a baud rate buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -530,8 +530,8 @@ uint8_t syn6288e_get_baud_rate(syn6288e_handle_t *handle, syn6288e_baud_rate_t *
 
 /**
  * @brief     set the chip mode
- * @param[in] *handle points to a syn6288e handle structure
- * @param[in] mode is the chip mode
+ * @param[in] *handle pointer to a syn6288e handle structure
+ * @param[in] mode chip mode
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -542,8 +542,8 @@ uint8_t syn6288e_set_mode(syn6288e_handle_t *handle, syn6288e_mode_t mode);
 
 /**
  * @brief      get the chip mode
- * @param[in]  *handle points to a syn6288e handle structure
- * @param[out] *mode points to a chip mode buffer
+ * @param[in]  *handle pointer to a syn6288e handle structure
+ * @param[out] *mode pointer to a chip mode buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -554,8 +554,8 @@ uint8_t syn6288e_get_mode(syn6288e_handle_t *handle, syn6288e_mode_t *mode);
 
 /**
  * @brief     set the chip synthesis volume
- * @param[in] *handle points to a syn6288e handle structure
- * @param[in] volume is the synthesis volume
+ * @param[in] *handle pointer to a syn6288e handle structure
+ * @param[in] volume synthesis volume
  * @return    status code
  *            - 0 success
  *            - 1 set synthesis volume failed
@@ -567,8 +567,8 @@ uint8_t syn6288e_set_synthesis_volume(syn6288e_handle_t *handle, uint8_t volume)
 
 /**
  * @brief      get the chip synthesis volume
- * @param[in]  *handle points to a syn6288e handle structure
- * @param[out] *volume points to a synthesis volume buffer
+ * @param[in]  *handle pointer to a syn6288e handle structure
+ * @param[out] *volume pointer to a synthesis volume buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -579,8 +579,8 @@ uint8_t syn6288e_get_synthesis_volume(syn6288e_handle_t *handle, uint8_t *volume
 
 /**
  * @brief     set the synthesis background volume
- * @param[in] *handle points to a syn6288e handle structure
- * @param[in] volume is the background volume
+ * @param[in] *handle pointer to a syn6288e handle structure
+ * @param[in] volume background volume
  * @return    status code
  *            - 0 success
  *            - 1 set background volume failed
@@ -592,8 +592,8 @@ uint8_t syn6288e_set_background_volume(syn6288e_handle_t *handle, uint8_t volume
 
 /**
  * @brief      get the chip synthesis background volume
- * @param[in]  *handle points to a syn6288e handle structure
- * @param[out] *volume points to a synthesis background volume buffer
+ * @param[in]  *handle pointer to a syn6288e handle structure
+ * @param[out] *volume pointer to a synthesis background volume buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -604,8 +604,8 @@ uint8_t syn6288e_get_background_volume(syn6288e_handle_t *handle, uint8_t *volum
 
 /**
  * @brief     set the synthesis speed
- * @param[in] *handle points to a syn6288e handle structure
- * @param[in] speed is the synthesis speed
+ * @param[in] *handle pointer to a syn6288e handle structure
+ * @param[in] speed synthesis speed
  * @return    status code
  *            - 0 success
  *            - 1 set synthesis speed failed
@@ -617,8 +617,8 @@ uint8_t syn6288e_set_synthesis_speed(syn6288e_handle_t *handle, uint8_t speed);
 
 /**
  * @brief      get the synthesis speed
- * @param[in]  *handle points to a syn6288e handle structure
- * @param[out] *speed points to a synthesis speed
+ * @param[in]  *handle pointer to a syn6288e handle structure
+ * @param[out] *speed pointer to a synthesis speed
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -640,8 +640,8 @@ uint8_t syn6288e_get_synthesis_speed(syn6288e_handle_t *handle, uint8_t *speed);
 
 /**
  * @brief     send the command to the chip
- * @param[in] *handle points to a syn6288e handle structure
- * @param[in] *command points to a command buffer
+ * @param[in] *handle pointer to a syn6288e handle structure
+ * @param[in] *command pointer to a command buffer
  * @return    status code
  *            - 0 success
  *            - 1 set command failed
