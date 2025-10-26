@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['chip_5fname_2',['chip_name',['../structsyn6288e__info__s.html#af890958c72bd715cc6454a10dc846ae6',1,'syn6288e_info_s']]],
-  ['chip_5fname_3',['CHIP_NAME',['../driver__syn6288e_8c.html#adc9da0a24824ca1239b593f6459b3954',1,'driver_syn6288e.c']]]
+  ['background_5fvolume_0',['background_volume',['../structsyn6288e__handle__s.html#a9daf8d480c312915d6bc140daf182170',1,'syn6288e_handle_s']]],
+  ['base_20driver_20function_1',['syn6288e base driver function',['../group__syn6288e__base__driver.html',1,'']]],
+  ['buf_2',['buf',['../structsyn6288e__handle__s.html#a210548e128eebd5bcd2ffb465d8d1cf5',1,'syn6288e_handle_s']]]
 ];

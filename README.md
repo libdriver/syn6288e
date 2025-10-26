@@ -10,7 +10,7 @@
 
 SYN6288E Chinese speech synthesis chip is a middle and high-end speech synthesis chip with higher cost performance and more natural effect launched by Beijing Yuyintianxia Technology Co., Ltd. in early 2010. SYN6288E receives the text to be synthesized through the asynchronous serial port to realize the text to sound (TTS) conversion. The latest SYN6288E speech synthesis chip inherits the excellent features of OSYNO6188 : the smallest LQFP32L chip package, simple hardware interface and high cost performance; In addition, SYN6288E text recognition is more intelligent, speech synthesis is more natural, and speech synthesis effect and intelligent recognition effect are greatly improved. It is a speech synthesis chip for high-end applications.
 
-LibDriver SYN6288E is a full-featured driver of SYN6288E launched by LibDriver.It provides text synthesis, music synthesis, alarm sound synthesis and other functions. LibDriver is MISRA compliant.
+LibDriver SYN6288E is a full-featured driver for SYN6288E, launched by LibDriver.It provides text synthesis, music synthesis, alarm sound synthesis and additional features. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
